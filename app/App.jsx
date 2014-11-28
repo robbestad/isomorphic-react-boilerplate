@@ -32,10 +32,17 @@ var App = React.createClass({
       <div style={inlineCss}>
       <h1>My App!</h1>
         <p>
-         {this.state.greeting}
+         <strong>State:</strong>  {this.state.greeting}
         </p>
         <p>
-         {this.state.inputText}
+         <strong>Input:</strong>  {this.state.inputText}
+        </p>
+        <p>
+        <ul>
+         <strong>Props:</strong> {this.props.data.map(function(data, idx){
+          return <li key={idx}>{data}</li>
+         })}
+         </ul>
         </p>
 
         <p>

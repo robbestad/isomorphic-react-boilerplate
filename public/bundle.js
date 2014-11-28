@@ -17,7 +17,6 @@ var App = React.createClass({displayName: 'App',
     });
   },
   handleInput: function(e){
-    console.log(e.target.value)
     this.setState({
       inputText:e.target.value
     });
@@ -34,10 +33,17 @@ var App = React.createClass({displayName: 'App',
       React.createElement("div", {style: inlineCss}, 
       React.createElement("h1", null, "My App!"), 
         React.createElement("p", null, 
-         this.state.greeting
+         React.createElement("strong", null, "State:"), "  ", this.state.greeting
         ), 
         React.createElement("p", null, 
-         this.state.inputText
+         React.createElement("strong", null, "Input:"), "  ", this.state.inputText
+        ), 
+        React.createElement("p", null, 
+        React.createElement("ul", null, 
+         React.createElement("strong", null, "Props:"), " ", this.props.data.map(function(data, idx){
+          return React.createElement("li", {key: idx}, data)
+         })
+         )
         ), 
 
         React.createElement("p", null, 
