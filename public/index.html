@@ -1,0 +1,11 @@
+<!doctype html>
+<head>
+</head>
+<body>
+  <div id=content></div>
+</body>
+<script src="vendor.js" type="text/javascript"></script>
+<script src="bundle.js" type="text/javascript"></script>
+<script>var MyApp = React.createFactory(require("myApp"));
+React.render(MyApp(), document.getElementById("content"))
+</script>
