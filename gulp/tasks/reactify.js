@@ -14,8 +14,6 @@ gulp.task('reactify', function() {
         literalify.configure(
         {
         global: true,
-        lodash: 'window._',
-        moment: 'window.moment',
         react: 'window.React'
         })
     )
