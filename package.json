@@ -1,9 +1,9 @@
 {
-  "name": "react-example-standard",
+  "name": "isomorphic-react-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Boilerplate for getting started with React",
   "main": "server.js",
-  "repository": "",
+  "repository": "https://github.com/svenanders/isomorphic-react-boilerplate",
   "keywords": [
     "react",
     "reactjs",
@@ -16,12 +16,9 @@
     "express": "^4.10.4",
     "jsx-loader": "^0.12.2",
     "node-jsx": "^0.12.4",
-    "react": "^0.12.x",
-    "reactify": "^0.17.1",
-    "webpack": "^1.4.13"
+    "react": "^0.12.x"
   },
   "devDependencies": {
-    "brfs": "^1.2.0",
     "browserify": "^6.3.3",
     "del": "^0.1.3",
     "gulp": "^3.8.10",
@@ -29,7 +26,6 @@
     "gulp-concat": "^2.4.2",
     "gulp-react": "^2.0.0",
     "gulp-rename": "^1.2.0",
-    "gulp-run-sequence": "^0.3.2",
     "gulp-uglify": "^1.0.1",
     "gulp-webpack": "^1.1.0",
     "literalify": "^0.3.0",
@@ -39,7 +35,8 @@
     "require-dir": "^0.1.0",
     "run-sequence": "^1.0.2",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.0.0"
+    "vinyl-source-stream": "^1.0.0",
+    "webpack": "^1.4.13"
   },
   "browserify": {
     "transform": [

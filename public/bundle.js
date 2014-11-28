@@ -1,9 +1,13 @@
 require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"myApp":[function(require,module,exports){
 var React = window.React;
 var App = React.createClass({displayName: 'App',
+  componentDidMount: function () {
+      this.refs.myInput.getDOMNode().focus();  
+  },
   getInitialState: function(){
     return {
-      greeting:"Hello!"
+      greeting:"Hello!",
+      inputText:""
     };
   },
   handleClick: function(){
@@ -12,6 +16,13 @@ var App = React.createClass({displayName: 'App',
       clicked:!this.state.clicked
     });
   },
+  handleInput: function(e){
+    console.log(e.target.value)
+    this.setState({
+      inputText:e.target.value
+    });
+  },
+
   render: function(){
 
     inlineCss={
@@ -22,10 +33,18 @@ var App = React.createClass({displayName: 'App',
     return(
       React.createElement("div", {style: inlineCss}, 
       React.createElement("h1", null, "My App!"), 
+        React.createElement("p", null, 
+         this.state.greeting
+        ), 
+        React.createElement("p", null, 
+         this.state.inputText
+        ), 
 
-         this.state.greeting, 
         React.createElement("p", null, 
          React.createElement("input", {type: "button", value: "Click me", onClick: this.handleClick})
+        ), 
+        React.createElement("p", null, 
+         React.createElement("input", {type: "text", ref: "myInput", onChange: this.handleInput})
         ), 
         React.createElement("p", null, 
           "This is a very tiny demo, but it highlights a number of React features.", 

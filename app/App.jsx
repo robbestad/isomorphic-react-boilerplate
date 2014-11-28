@@ -1,8 +1,12 @@
 var React = require('react');
 var App = React.createClass({
+  componentDidMount: function () {
+      this.refs.myInput.getDOMNode().focus();  
+  },
   getInitialState: function(){
     return {
-      greeting:"Hello!"
+      greeting:"Hello!",
+      inputText:""
     };
   },
   handleClick: function(){
@@ -11,6 +15,12 @@ var App = React.createClass({
       clicked:!this.state.clicked
     });
   },
+  handleInput: function(e){
+    this.setState({
+      inputText:e.target.value
+    });
+  },
+
   render: function(){
 
     inlineCss={
@@ -21,10 +31,18 @@ var App = React.createClass({
     return(
       <div style={inlineCss}>
       <h1>My App!</h1>
-
+        <p>
          {this.state.greeting}
+        </p>
+        <p>
+         {this.state.inputText}
+        </p>
+
         <p>
          <input type="button" value="Click me" onClick={this.handleClick} />
+        </p>
+        <p>
+         <input type="text" ref="myInput" onChange={this.handleInput} />
         </p>
         <p>
           This is a very tiny demo, but it highlights a number of React features.
