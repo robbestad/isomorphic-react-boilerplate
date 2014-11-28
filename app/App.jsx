@@ -27,9 +27,9 @@ var App = React.createClass({
          <input type="button" value="Click me" onClick={this.handleClick} />
         </p>
         <p>
-          This is a very short demo, but it highlights a number of React features.
+          This is a very tiny demo, but it highlights a number of React features.
           <ul>
-              <li>Isomorphic rendering</li>
+              <li>Isomorphic rendering (server and client side rendering)</li>
               <li>Inline CSS</li>
               <li>Props and state</li>
               <li>Data binding</li>
