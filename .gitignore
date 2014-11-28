@@ -1,4 +1,5 @@
 node_modules
+public/index.php
 build
 npm-debug.log
 coverage*

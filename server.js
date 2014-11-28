@@ -59,9 +59,9 @@ app.get('*', function (req, res) {
   }
 
 // The http server listens on port 3000
-}).listen(3000, function(err) {
+}).listen((process.env.PORT || 3000), function(err) {
   if (err) throw err
-  console.log('Listening on 3000...')
+  console.log('Listening on '+(process.env.PORT || 3000)+'...')
 })
 
 

@@ -1,5 +1,15 @@
-Install with 'npm install'
+Install with
 
-Then run 'gulp'
+> npm install
 
-Finally, execute with 'node server.js'
+Then run:
+
+> gulp
+
+Finally, execute with:
+
+> node server.js
+
+---
+
+[Demo](https://hidden-lowlands-9759.herokuapp.com/)
